@@ -39,7 +39,7 @@
 
 3. Importation des données via Compass.
 
-### 2 Requetes de lecture
+### Exercice 2 Requetes de lecture
 
 1.  Récupérer tous les produits d'une catégorie.
     - **Produits de la catégorie "Informatique"** :
@@ -75,7 +75,7 @@
     })
     ```
 
-### 3 Mise à jour
+### Exercice 3 Mise à jour
 
 1. Augmenter le prix de tous les produits d'une catégorie.
    - **Augmenté de 5% les articles audio**
@@ -113,7 +113,7 @@
    );
    ```
 
-### 4 Requetes complexe
+### Exercice 4 Requetes complexe
 
 1. Trouver les produits disponibles avec tag1 ET tag2
    - **Trouvé les articles qui ont les tags "gaming" et "RGB"**
