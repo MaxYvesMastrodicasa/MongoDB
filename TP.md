@@ -86,7 +86,9 @@
    );
    ```
 2. Ajouter un champ "promotion" à certains
-   produits. - **Ajout du champs promotions**
+   produits.
+
+   - **Ajout du champs promotions**
 
    ```js
    db.ecommerce_produits.updateMany(
@@ -96,22 +98,26 @@
    ```
 
 3. Ajouter un nouveau tag à tous les produits
-   d’une catégorie. - **Augmenté de 5% les articles audio**
+   d’une catégorie.
+
+   - **Ajout du tag RGB dans tout les accessoires**
 
    ```js
    db.ecommerce_produits.updateMany(
-     { categorie: "Audio" },
-     { $mul: { prix: 1.05 } }
+     { categorie: "Accessoire" },
+     { $push: { tag: "RGB" } }
    );
    ```
 
-4. Mettre à jour le stock après une "vente". - **Mise à jour du stock**
-   ```js
-   db.ecommerce_produits.updateMany(
-     { _id: ObjectId("67c58d6a9dc140db4c61e1fc") },
-     { $inc: { stock: -1 } }
-   );
-   ```
+4. Mettre à jour le stock après une "vente".
+
+- **Mise à jour du stock**
+  ```js
+  db.ecommerce_produits.updateMany(
+    { _id: ObjectId("67c58d6a9dc140db4c61e1fc") },
+    { $inc: { stock: -1 } }
+  );
+  ```
 
 ### Exercice 4 Requetes complexe
 
