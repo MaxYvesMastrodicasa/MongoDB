@@ -1,0 +1,135 @@
+[{
+  "_id": {
+    "$oid": "67c873d218b1f6e8b6da4daf"
+  },
+  "nom": "Bibliothèque Nationale de Paris",
+  "adresse": {
+    "rue": "Quai François Mauriac",
+    "ville": "Paris",
+    "code_postal": "75013"
+  },
+  "localisation": {
+    "type": "Point",
+    "coordinates": [
+      2.37679,
+      48.83379
+    ]
+  },
+  "zone_service": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          2.37,
+          48.83
+        ],
+        [
+          2.385,
+          48.83
+        ],
+        [
+          2.385,
+          48.84
+        ],
+        [
+          2.37,
+          48.84
+        ],
+        [
+          2.37,
+          48.83
+        ]
+      ]
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "67c873d218b1f6e8b6da4db0"
+  },
+  "nom": "Médiathèque de Bordeaux",
+  "adresse": {
+    "rue": "85 Cours du Maréchal Juin",
+    "ville": "Bordeaux",
+    "code_postal": "33000"
+  },
+  "localisation": {
+    "type": "Point",
+    "coordinates": [
+      -0.57918,
+      44.837789
+    ]
+  },
+  "zone_service": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -0.59,
+          44.83
+        ],
+        [
+          -0.57,
+          44.83
+        ],
+        [
+          -0.57,
+          44.85
+        ],
+        [
+          -0.59,
+          44.85
+        ],
+        [
+          -0.59,
+          44.83
+        ]
+      ]
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "67c873d218b1f6e8b6da4db1"
+  },
+  "nom": "Bibliothèque Municipale de Marseille",
+  "adresse": {
+    "rue": "12 Boulevard de la Corderie",
+    "ville": "Marseille",
+    "code_postal": "13007"
+  },
+  "localisation": {
+    "type": "Point",
+    "coordinates": [
+      5.36978,
+      43.296482
+    ]
+  },
+  "zone_service": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.36,
+          43.29
+        ],
+        [
+          5.38,
+          43.29
+        ],
+        [
+          5.38,
+          43.31
+        ],
+        [
+          5.36,
+          43.31
+        ],
+        [
+          5.36,
+          43.29
+        ]
+      ]
+    ]
+  }
+}]
