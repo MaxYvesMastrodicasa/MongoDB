@@ -89,3 +89,88 @@ L'ajout d'index a permis d'améliorer les performances des requêtes. Nous avons
 
 **Recommandation :**
 Dans une application de production, il est important de choisir les index en fonction des requêtes les plus fréquentes et d'utiliser `explain()` pour ajuster l'indexation en fonction des performances observées.
+
+# TP2
+
+## Exercice 2.2
+
+1.
+
+```js
+db.utilisateurs
+  .find({
+    "adresse.localisation": {
+      $near: {
+        $geometry: {
+          type: "Point",
+          coordinates: [2.3522, 48.8566],
+        },
+        $maxDistance: 2000,
+        $minDistance: 0,
+      },
+    },
+  })
+  .limit(5);
+```
+
+2.
+
+```js
+db.bibliotheques.findOne({
+  localisation: {
+    $near: {
+      $geometry: {
+        type: "Point",
+        coordinates: [2.3522, 48.8566], // Cooordonnée de l'utilisateur
+      },
+    },
+  },
+});
+```
+
+3.
+
+```js
+db.bibliotheques.aggregate([
+  {
+    $geoNear: {
+      near: {
+        type: "Point",
+        coordinates: [2.37, 48.83],
+      },
+      distanceField: "distance",
+      distanceMultiplier: 0.001,
+      spherical: true,
+      key: "localisation",
+    },
+  },
+  {
+    $sort: { distance: 1 },
+  },
+]);
+```
+
+## Exercice 2.3
+
+1.
+
+# TP3
+
+## 3.1
+
+1.
+
+```js
+db.livres.aggregate([
+  {
+    $group: {
+      _id: "$genre",
+      nb_livre: { $sum: "$stock" },
+      note_moy: { $avg: "$note_moyenne" },
+      prix_moy: { $avg: "$prix" },
+      prix_min: { $min: "$prix" },
+      prix_max: { $max: "$prix" },
+    },
+  },
+]);
+```
